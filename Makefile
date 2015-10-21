@@ -2,7 +2,7 @@ PROGRAM_EMAIL = email-cli
 PROGRAM_UPS = ups-cli
 PROGRAM_UPSXX = ups-cli++
 PROGRAM_MON = monitor-cli
-PROGRAM_MLM = mlm
+PROGRAM_MLM = election 
 PROGRAM_MLM_TEST = mlm-test
 PROGRAM_ZYRE_TRIVIAL = zyre-trivial
 PROGRAM_MALAMUTEZ = malamute-z
@@ -48,7 +48,7 @@ $(PROGRAM_UPSXX): ups/ups.cc
 $(PROGRAM_MON): monitor/monitor.cc
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
-$(PROGRAM_MLM): mlm.c
+$(PROGRAM_MLM): election.c
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(LDFLAGS_MLM)
 
 $(PROGRAM_MLM_TEST): temp/test.c
